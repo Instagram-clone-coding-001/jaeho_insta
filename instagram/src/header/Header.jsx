@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Styled from "styled-components"
-
+import { AiOutlineInstagram } from "react-icons/ai"
+import { AiOutlineMessage }  from "react-icons/ai"
+import { AiFillLock } from "react-icons/ai"
 
 const Header = props => {
 
@@ -12,14 +14,14 @@ const Header = props => {
 
   return (
     <Top>
-      <div>사진</div>
+      <div><AiOutlineInstagram /></div>
       <Input type="text" placeholder="검색하기" />
-      <ButtonGroup>
-        <Button>메세지</Button>
-        <Button onClick={logoutButtonClick}>로그아웃</Button>
-      </ButtonGroup>
+      <ImgGroup>
+        <div><AiOutlineMessage /></div>
+        <div onClick={logoutButtonClick}><AiFillLock /></div>
+      </ImgGroup>
     </Top>
-  )
+  ) 
 };
 
 export default Header;
@@ -38,13 +40,15 @@ const Input = Styled.input`
   width: 40%;
   height: 40px; 
 `
-export const ButtonGroup = Styled.div`
+
+const ImgGroup = Styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
+  cursor : pointer;
 `;
 
-export const Button = Styled.button`
-  width: 100px;
-  height: 50px;
-`
+// const Img = Styled.button`
+//   width: 100px;
+//   height: 50px;
+// `

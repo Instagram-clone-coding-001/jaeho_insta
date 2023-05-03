@@ -1,7 +1,5 @@
 import React from "react";
 import Styled from "styled-components";
-import { ButtonGroup } from "../header/Header";
-import { Button } from "../header/Header";
 import { useNavigate } from "react-router-dom";
 
 const Login = props => {
@@ -50,4 +48,13 @@ const Inputid = Styled.input`
   box-sizing: border-box;
 `;
 
+const ButtonGroup = Styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+`;
 
+const Button = Styled.button`
+  width: 100px;
+  height: 50px;
+`
