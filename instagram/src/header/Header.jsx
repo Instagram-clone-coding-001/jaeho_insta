@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Styled from "styled-components"
 import { AiOutlineInstagram } from "react-icons/ai"
-import { AiOutlineMessage }  from "react-icons/ai"
+import { AiOutlineMessage } from "react-icons/ai"
 import { AiFillLock } from "react-icons/ai"
 
 const Header = props => {
@@ -21,7 +21,7 @@ const Header = props => {
         <div onClick={logoutButtonClick}><AiFillLock /></div>
       </ImgGroup>
     </Top>
-  ) 
+  )
 };
 
 export default Header;
@@ -39,6 +39,7 @@ const Top = Styled.header`
 const Input = Styled.input`
   width: 40%;
   height: 40px; 
+  margin-left: 5rem;
 `
 
 const ImgGroup = Styled.div`
@@ -47,8 +48,3 @@ const ImgGroup = Styled.div`
   gap: 2rem;
   cursor : pointer;
 `;
-
-// const Img = Styled.button`
-//   width: 100px;
-//   height: 50px;
-// `
