@@ -14,7 +14,9 @@ const Post = props => {
             <Board>
                 <High>
                     <Info>
-                        <span>사진</span>
+                        <Profile>
+                            <img src="src/assets/Profile.jpg" alt="사진" />
+                        </Profile>
                         <Name>
                             <span>jaehooo13</span>
                             <span>서울</span>
@@ -23,15 +25,23 @@ const Post = props => {
                     <span><CgMore /></span>
                 </High>
 
-
                 <Pic />
+
                 <Emoiton>
-                    <AiOutlineHeart />
-                    <FaRegComment />
-                    <BsSend />
-                    <BsDownload />
+                    <Left>
+                        <AiOutlineHeart />
+                        <FaRegComment />
+                        <BsSend />
+                    </Left>
+                    <Right>
+                        <span><BsDownload /></span>
+                    </Right>
                 </Emoiton>
-                <Comment />
+
+                <Comment>
+                    <div>좋아요 ㅇㅇ개</div>
+                    <div>아이디 내용</div>
+                </Comment>
                 <Write type="text" placeholder="댓글 달기..." />
             </Board >
         </>
@@ -39,6 +49,7 @@ const Post = props => {
 };
 
 export default Post;
+
 
 const Board = Styled.section`
     border: 3px solid black;
@@ -52,7 +63,13 @@ const High = Styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 2rem;
+    margin-right: 1rem;
+`
+
+const Profile = Styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
 `
 
 const Name = Styled.div`
@@ -77,7 +94,20 @@ const Emoiton = Styled.div`
     border: 1px double green;
     width: 100%;
     height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    font-size:2rem;
 `
+
+const Left = Styled.span`
+    display: flex;
+    gap: 0.5rem;
+`
+
+const Right = Styled.span`
+    padding-right: 1rem;
+`
+
 const Comment = Styled.div`
     border: 1px solid blue;
     width: 100%;
