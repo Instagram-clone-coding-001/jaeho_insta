@@ -4,6 +4,7 @@ import Styled from "styled-components"
 import { AiOutlineInstagram } from "react-icons/ai"
 import { AiOutlineMessage } from "react-icons/ai"
 import { AiFillLock } from "react-icons/ai"
+import Post from "../article/Post";
 
 const Header = props => {
 
@@ -13,14 +14,17 @@ const Header = props => {
   }
 
   return (
-    <Top>
-      <div><AiOutlineInstagram /></div>
-      <Input type="text" placeholder="검색하기" />
-      <ImgGroup>
-        <div><AiOutlineMessage /></div>
-        <div onClick={logoutButtonClick}><AiFillLock /></div>
-      </ImgGroup>
-    </Top>
+    <>
+      <Top>
+        <div><AiOutlineInstagram /></div>
+        <Input type="text" placeholder="검색하기" />
+        <ImgGroup>
+          <div><AiOutlineMessage /></div>
+          <div onClick={logoutButtonClick}><AiFillLock /></div>
+        </ImgGroup>
+      </Top>
+      <Post />
+    </>
   )
 };
 

@@ -4,23 +4,23 @@ import { useNavigate } from "react-router-dom";
 
 const Login = props => {
 
-    const navigate = useNavigate();
-    const handleButtonClick = () => {
-        navigate("/main")
-    };
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("/main")
+  };
 
-    return (
-        <Form>
-            <div>이메일</div>
-            <Inputid type="text" placeholder="example@naver.com" />
-            <div>비밀번호</div>
-            <Inputid type="password" placeholder="비밀번호를 입력하세요" />
-            <ButtonGroup>
-                <Button>회원가입</Button>
-                <Button onClick={handleButtonClick}>로그인</Button>
-            </ButtonGroup>
-        </Form>
-    );
+  return (
+    <Form>
+      <div>이메일</div>
+      <Inputid type="text" placeholder="example@naver.com" />
+      <div>비밀번호</div>
+      <Inputid type="password" placeholder="비밀번호를 입력하세요" />
+      <ButtonGroup>
+        <Button>회원가입</Button>
+        <Button onClick={handleButtonClick}>로그인</Button>
+      </ButtonGroup>
+    </Form>
+  );
 };
 
 export default Login;
